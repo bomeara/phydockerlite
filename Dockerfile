@@ -1,4 +1,4 @@
-FROM rocker/ropensci
+FROM rocker/rstudio:latest
 
 MAINTAINER Brian O'Meara <omeara.brian@gmail.com>
 
