@@ -26,6 +26,8 @@ RUN apt-get -y install python-dev
 
 RUN Rscript -e "install.packages('ctv')"
 
+RUN Rscript -e "install.packages('partitions')"
+
 RUN Rscript -e "ctv::install.views('Phylogenetics')"
 
 RUN Rscript -e "install.packages('diagram')"
