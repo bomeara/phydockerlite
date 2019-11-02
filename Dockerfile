@@ -6,11 +6,18 @@ RUN apt-get update
 
 RUN apt-get install -y apt-utils
 
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    libx11-6 \
+    libxss1 \
+    libxt6 \
+    libxext6 \
+    libsm6 \
+    libice6 \
+    xdg-utils \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN echo 'options(repos = c(CRAN="https://cran.rstudio.com"))' > ~/.Rprofile
-
-RUN apt-get install -y software-properties-common
-
-RUN apt-get -y install libx11-dev
 
 RUN apt-get update
 
