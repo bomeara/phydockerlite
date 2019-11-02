@@ -28,9 +28,9 @@ RUN Rscript -e "install.packages('ctv')"
 
 RUN Rscript -e "install.packages('partitions')"
 
-RUN Rscript -e "ctv::install.views('Phylogenetics')"
-
 RUN Rscript -e "install.packages('diagram')"
+
+RUN Rscript -e "ctv::install.views('Phylogenetics')"
 
 RUN Rscript -e "devtools::install_github('bomeara/phrapl')"
 
