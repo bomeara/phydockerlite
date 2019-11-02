@@ -20,7 +20,7 @@ RUN apt-get install -y libmpfr-dev libmpfr-doc
 
 RUN apt-get install -y curl
 
-RUN apt-get install libgl1-mesa-dev
+RUN apt-get install -y libgl1-mesa-dev
 
 RUN apt-get -y install python-dev
 
